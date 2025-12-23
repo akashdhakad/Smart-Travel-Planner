@@ -15,7 +15,7 @@
     <nav class="bg-white shadow-md">
       <div class="max-w-6xl mx-auto px-4">
         <div class="flex justify-between items-center h-16">
-          <div class="text-xl font-bold text-blue-600">SmartTravel</div>
+          <div class="text-xl font-bold text-blue-600">Smart Travel</div>
           <div class="hidden md:flex space-x-6">
             <a href="home.html" class="text-gray-700 hover:text-blue-600"
               >Home</a
@@ -47,8 +47,31 @@
         <p class="text-gray-700 mb-2">You Searched For :</p>
         <h2 id="cityName" class="text-xl font-semibold text-sky-600 mb-4"></h2>
 
-        <div id="Loading" class="mt-4 text-green-400">Loading City Info...</div>
-        <div id="cityinfo" class=""></div>
+        <div id="loading" class="mt-4 text-green-400">Loading City Info...</div>
+        <div
+          id="cityInfoBox"
+          class="hidden mt-4 bg-gray-50 p-4 rounded-lg shadow-inner space-y-3 text-gray-700"
+        >
+          <div class="flex justify-between">
+            <span class="font-semibold">Latitude:</span>
+            <span id="lat"></span>
+
+            <span class="font-semibold">Longitude:</span>
+            <span id="lon"></span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold">Country:</span>
+            <span id="country"></span>
+
+            <span class="font-semibold">State:</span>
+            <span id="state"></span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold">Population:</span>
+            <span id="population"></span>
+          </div>
+        </div>
+        <p id="error" class="hidden text-red-500 font-semibold mt-2">City Not Found...</p>
       </div>
     </div>
     <script src="./js/destination.js"></script>
